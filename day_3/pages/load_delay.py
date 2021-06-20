@@ -2,7 +2,6 @@ from .base_page import BasePage
 from day_3.locators import MainPageLocators, LoadDelayLocators
 
 
-
 class LoadDelay(BasePage):
     def go_to_load_delay_page(self):
         login_link = self.browser.find_element(*MainPageLocators.LOAD_DELAY)

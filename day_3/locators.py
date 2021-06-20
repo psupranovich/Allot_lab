@@ -24,3 +24,7 @@ class AjaxDataLocators():
 class ClientSideDelayLocators():
     CLIENT_LOADED_DATA = (By.XPATH, '/html/body/section/div/div/p')
     BUTTON = (By.XPATH, '/html/body/section/div/button')
+
+
+class ClickLocators():
+    BUTTON_CLICK = (By.CSS_SELECTOR, '#badButton')
