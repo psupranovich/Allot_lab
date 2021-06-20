@@ -14,3 +14,13 @@ class MainPageLocators():
 
 class LoadDelayLocators():
     BUTTON_APPEARING_AFTER_DELAY = (By.XPATH,'/html/body/section/div/button')
+
+
+class AjaxDataLocators():
+    LOADED_DATA = (By.CSS_SELECTOR, '#content > p')
+    AJAX_BUTTON = (By.CSS_SELECTOR, '#ajaxButton')
+
+
+class ClientSideDelayLocators():
+    CLIENT_LOADED_DATA = (By.XPATH, '/html/body/section/div/div/p')
+    BUTTON = (By.XPATH, '/html/body/section/div/button')

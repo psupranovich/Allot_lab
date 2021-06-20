@@ -45,6 +45,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day_3\pages\ajax_data.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\day_3\pages\client_side_delay.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\day_3\pages\uitestingtask.py">
           <value>
             <Attribute>
