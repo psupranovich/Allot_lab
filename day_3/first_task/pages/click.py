@@ -1,7 +1,7 @@
 from time import sleep
 
 from .base_page import BasePage
-from day_3.locators import  MainPageLocators, ClickLocators
+from .day_3_first_task.locators import  MainPageLocators, ClickLocators
 
 
 class BadClick(BasePage):
@@ -19,6 +19,7 @@ class BadClick(BasePage):
         button.click()
         button.click()
         button.click()
+
 
 
 

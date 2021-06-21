@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from day_3.locators import MainPageLocators, LoadDelayLocators
+from day_3.first_task.locators import MainPageLocators, LoadDelayLocators
 
 
 class LoadDelay(BasePage):
