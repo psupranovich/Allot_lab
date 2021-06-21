@@ -1,7 +1,7 @@
 from time import sleep
 
 from .base_page import BasePage
-from .day_3_first_task.locators import  MainPageLocators, ClickLocators
+from day_3.first_task.locators import  MainPageLocators, ClickLocators
 
 
 class BadClick(BasePage):
@@ -15,10 +15,8 @@ class BadClick(BasePage):
     def should_be_cLick_button(self):
         button = self.browser.find_element(*ClickLocators.BUTTON_CLICK)
         # self.browser.implicitly_wait(5) - не рботает?
-        sleep(3) #TODO!!!!
         button.click()
-        button.click()
-        button.click()
+
 
 
 

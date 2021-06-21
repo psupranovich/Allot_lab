@@ -38,6 +38,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day_3\first_task\pages\text_input.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\day_3\locators.py">
           <value>
             <Attribute>

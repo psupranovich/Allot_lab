@@ -28,3 +28,7 @@ class ClientSideDelayLocators():
 
 class ClickLocators():
     BUTTON_CLICK = (By.CSS_SELECTOR, '#badButton')
+
+class InputTextLocators():
+    INPUTTEXT = (By.CSS_SELECTOR, '#newButtonName')
+    NEW_BUTTON = (By.CSS_SELECTOR, '#updatingButton')
