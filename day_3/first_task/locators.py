@@ -31,5 +31,6 @@ class ClickLocators():
     BUTTON_CLICK_GREEN = (By.CSS_SELECTOR, '[class = "btn btn-success"]')
 
 class InputTextLocators():
-    INPUTTEXT = (By.CSS_SELECTOR, '#newButtonName')
-    NEW_BUTTON = (By.CSS_SELECTOR, '#updatingButton')
+    INPUT = (By.ID, 'newButtonName')
+    BUTTON = (By.ID, 'updatingButton')
+    UPDATED_BUTTON = (By.XPATH, '//button[contains(.,"new_one")]')

@@ -23,5 +23,5 @@ class BasePage:
     def click_element(self, locator):
         return self.find_element(locator).click()
 
-    def send_key(self, key):
-        return self.find_element().send_keys(key)
+    def send_key(self, key, locator):
+        return self.find_element(locator).send_keys(key)

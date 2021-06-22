@@ -3,14 +3,15 @@ from day_3.first_task.locators import MainPageLocators, InputTextLocators
 
 
 class TextInput(BasePage):
-    def go_to_text_input_page(self):
-        login_link = self.browser.find_element(*MainPageLocators.TEXT_INPUT)
-        login_link.click()
-        return TextInput(browser=self.browser, url=self.browser.current_url)
 
-    def user_should_be_able_to_input_text(self):
-        self.browser.find_element(*InputTextLocators.INPUTTEXT).send_keys("new_one")
-        return TextInput(browser=self.browser, url=self.browser.current_url)
+    def open_page_button(self):
+        return self.click_element(MainPageLocators.TEXT_INPUT)
 
-    def user_should_see_new_button_name(self):
-        self.browser.find_element(*InputTextLocators.NEW_BUTTON).click()
+    def send_key_for_the_button(self):
+        return self.send_key('new_one', InputTextLocators.INPUT)
+
+    def press_the_button_on_the_page(self):
+        return self.click_element(InputTextLocators.BUTTON)
+
+    def find_updated_button(self):
+        return self.find_element(InputTextLocators.UPDATED_BUTTON)
