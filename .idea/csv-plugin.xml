@@ -31,10 +31,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\day_3\first_task\pages\base_page.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\day_3\first_task\pages\click.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\day_3\first_task\pages\load_delay.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>

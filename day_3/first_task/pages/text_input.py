@@ -8,8 +8,6 @@ class TextInput(BasePage):
         login_link.click()
         return TextInput(browser=self.browser, url=self.browser.current_url)
 
-        # self.browser.save_screenshot('screenshots/' + str(uuid.uuid4()) + '.png')
-
     def user_should_be_able_to_input_text(self):
         self.browser.find_element(*InputTextLocators.INPUTTEXT).send_keys("new_one")
         return TextInput(browser=self.browser, url=self.browser.current_url)

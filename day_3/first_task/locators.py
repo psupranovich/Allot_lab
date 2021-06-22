@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     LOAD_DELAY = (By.XPATH, "//*[@id='overview']/div/div[1]/div[4]/h3/a")
-    AJAX_DATA = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[1]/h3/a')
+    AJAX_DATA = (By.CSS_SELECTOR, '#overview > div > div:nth-child(2) > div:nth-child(1) > h3 > a')
     CLIENT_SIDE_DELAY = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[2]/h3/a')
     CLICK = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[3]/h3/a')
     TEXT_INPUT = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[4]/h3/a')
@@ -18,7 +18,7 @@ class LoadDelayLocators():
 
 class AjaxDataLocators():
     LOADED_DATA = (By.CSS_SELECTOR, '#content > p')
-    AJAX_BUTTON = (By.CSS_SELECTOR, '#ajaxButton')
+    AJAX_BUTTON = (By.ID, 'ajaxButton')
 
 
 class ClientSideDelayLocators():
