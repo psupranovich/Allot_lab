@@ -16,7 +16,7 @@ class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
 
-        self.driver = webdriver.Chrome('chromedriver.exe')
+        self.driver = webdriver.Chrome(PATH = 'chromedriver.exe')
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
