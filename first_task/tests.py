@@ -1,3 +1,4 @@
+import os
 import unittest
 from selenium import webdriver
 from webdriver_manager.utils import ChromeType
@@ -16,13 +17,17 @@ from pathlib import Path
 
 class Setup(unittest.TestCase):
 
-    def setUp(self) -> None:
-        self.driver = webdriver.Remote(
-            command_executor='http://www.example.com',
-            options=webdriver.FirefoxOptions()
+    def setUp(self):
+
+        caps = {'browserName': os.getenv('BROWSER', 'chrome')}
+        self.browser = webdriver.Remote(
+            command_executor='http://192.168.1.2:4444/wd/hub',
+            desired_capabilities=caps
         )
 
         self.driver.implicitly_wait(10)
+
+
 
     def tearDown(self) -> None:
         self.driver.quit()
