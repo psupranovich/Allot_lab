@@ -1,7 +1,7 @@
 FROM python:3.6-slim
 
-COPY ./first_task/requirements.txt /first_task/
-WORKDIR /first_task
-RUN pip install  -r /first_task/requirements.txt
-RUN pytest tests.py
+COPY . /Allot_lab
+WORKDIR /Allot_lab
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pytest -n4 first_task/tests.py--junitxml=reports/result.xml
 CMD tail -f /dev/null
