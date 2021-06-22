@@ -13,19 +13,14 @@ from first_task.pages.text_input import TextInput
 from webdriver_manager.chrome import ChromeDriverManager
 from pathlib import Path
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.set_capability("browserVersion", "67")
-chrome_options.set_capability("platformName", "Windows XP")
-
 
 class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
         self.driver = webdriver.Remote(
-          command_executor='http://www.example.com',
-          options=chrome_options
-      )
-
+            command_executor='http://www.example.com',
+            options=webdriver.FirefoxOptions()
+        )
 
         self.driver.implicitly_wait(10)
 
@@ -45,6 +40,7 @@ class TestSampleApp(Setup):
         self.page.press_the_button_on_the_page()
         self.page.find_updated_information()
         self.assertTrue(self.page.find_updated_information())
+
 
 class TestAjaxData(Setup):
 
@@ -91,6 +87,7 @@ class TestClientSideDelay(Setup):
         self.page.client_side_page_element_appeared()
         self.assertTrue(self.page.client_side_page_element_appeared())
 
+
 #
 class TestBadClick(Setup):
 
@@ -128,15 +125,15 @@ class TestTextInput(Setup):
 #         self.page.find_the_button_on_the_page()
 #         # self.page.click_element()
 #         # self.assertTrue(self.page.click_element)
-    #TODO script problem
+# TODO script problem
 
 
 if __name__ == '__main__':
     from multiprocessing import Process
+
     procs = []
     procs.append(Process(target=unittest.main, kwargs={'verbosity': 2}))
     for proc in procs:
         proc.start()
     for proc in procs:
         proc.join()
-
