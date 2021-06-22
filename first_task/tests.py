@@ -10,13 +10,14 @@ from first_task.pages.sample_app import SampleApp
 from first_task.pages.scrollbars import Scrollbars
 
 from first_task.pages.text_input import TextInput
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
 
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
