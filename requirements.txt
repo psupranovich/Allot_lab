@@ -3,4 +3,5 @@ pytest
 nose
 pytest-xdist==2.3.0
 nose-parallel==0.4.0
+webdriver_manager
 
