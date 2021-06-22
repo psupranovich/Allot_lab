@@ -1,3 +1,4 @@
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
@@ -17,6 +18,7 @@ class BasePage:
         return WebDriverWait(self.driver, time).until(EC.presence_of_all_elements_located(locator),
                                                       message=f"Can't find elements by locator {locator}")
 
+
     def go_to_site(self):
         return self.driver.get(self.base_url)
 
@@ -25,3 +27,4 @@ class BasePage:
 
     def send_key(self, key, locator):
         return self.find_element(locator).send_keys(key)
+

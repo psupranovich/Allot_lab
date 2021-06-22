@@ -7,7 +7,7 @@ class MainPageLocators():
     CLIENT_SIDE_DELAY = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[2]/h3/a')
     CLICK = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[3]/h3/a')
     TEXT_INPUT = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[4]/h3/a')
-    # SCROLLBARS = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[1]/h3/a')
+    SCROLLBARS = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[1]/h3/a')
     # DYNAMIC_TABLE = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[2]/h3/a')
     # VERIFY_TEXT = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[3]/h3/a')
     PROGRESS_BAR = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[4]/h3/a')
@@ -54,3 +54,5 @@ class SampleAppLocators():
     LOGINSTATUS = (By.ID, 'loginstatus')
 
 
+class ScrollbarsLocators():
+    HIDDEN_BUTTON = (By.CSS_SELECTOR, '#hidingButton')
