@@ -1,5 +1,7 @@
 import unittest
 from selenium import webdriver
+from webdriver_manager.utils import ChromeType
+
 from first_task.pages.ajax_data import AjaxData
 from first_task.pages.click import BadClick
 from first_task.pages.client_side_delay import ClientSideDelay
