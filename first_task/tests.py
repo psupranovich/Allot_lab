@@ -9,7 +9,6 @@ from first_task.pages.load_delay import LoadDelay
 from first_task.pages.progress_bar import ProgressBar
 from first_task.pages.sample_app import SampleApp
 from first_task.pages.scrollbars import Scrollbars
-
 from first_task.pages.text_input import TextInput
 from webdriver_manager.chrome import ChromeDriverManager
 
