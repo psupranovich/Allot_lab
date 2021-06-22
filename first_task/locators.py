@@ -10,6 +10,7 @@ class MainPageLocators():
     SCROLLBARS = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[1]/h3/a')
     DYNAMIC_TABLE = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[2]/h3/a')
     VERIFY_TEXT = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[3]/h3/a')
+    PROGRESS_BAR = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[4]/h3/a')
 
 
 class LoadDelayLocators():
@@ -30,7 +31,17 @@ class ClickLocators():
     BUTTON_CLICK = (By.CSS_SELECTOR, '[class="btn btn-primary"]')
     BUTTON_CLICK_GREEN = (By.CSS_SELECTOR, '[class = "btn btn-success"]')
 
+
 class InputTextLocators():
     INPUT = (By.ID, 'newButtonName')
     BUTTON = (By.ID, 'updatingButton')
     UPDATED_BUTTON = (By.XPATH, '//button[contains(.,"new_one")]')
+
+
+class ProgressBarLocators():
+    START_BUTT0N = (By.ID, 'startButton')
+    STOP_BUTTON = (By.ID, 'stopButton')
+    TRUE_VALUE = (By.CSS_SELECTOR, '[aria-valuenow="75"]')
+    RESULT = (By.ID, 'result')
+
+

@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from day_3.first_task.locators import MainPageLocators, ClickLocators
+from first_task.locators import MainPageLocators, ClickLocators
 
 
 class BadClick(BasePage):

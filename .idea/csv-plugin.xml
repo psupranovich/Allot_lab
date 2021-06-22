@@ -136,6 +136,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\first_task\pages\progress_bar.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
