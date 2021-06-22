@@ -13,15 +13,20 @@ from first_task.pages.text_input import TextInput
 from webdriver_manager.chrome import ChromeDriverManager
 from pathlib import Path
 
+chrome_options = webdriver.ChromeOptions()
+chrome_options.set_capability("browserVersion", "67")
+chrome_options.set_capability("platformName", "Windows XP")
 
-basedir = Path(__file__).resolve().parent.parent
 
 class Setup(unittest.TestCase):
 
-
     def setUp(self) -> None:
+        self.driver = webdriver.Remote(
+          command_executor='http://www.example.com',
+          options=chrome_options
+      )
 
-        self.driver = webdriver.Chrome(f"{basedir}/chromedriver.exe")
+
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
