@@ -1,8 +1,5 @@
-import os
 import unittest
 from selenium import webdriver
-from webdriver_manager.utils import ChromeType
-
 from first_task.pages.ajax_data import AjaxData
 from first_task.pages.click import BadClick
 from first_task.pages.client_side_delay import ClientSideDelay
@@ -11,23 +8,14 @@ from first_task.pages.progress_bar import ProgressBar
 from first_task.pages.sample_app import SampleApp
 from first_task.pages.scrollbars import Scrollbars
 from first_task.pages.text_input import TextInput
-from webdriver_manager.chrome import ChromeDriverManager
-from pathlib import Path
 
 
 class Setup(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self) -> None:
 
-        caps = {'browserName': os.getenv('BROWSER', 'chrome')}
-        self.browser = webdriver.Remote(
-            command_executor='http://192.168.1.2:4444/wd/hub',
-            desired_capabilities=caps
-        )
-
+        self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
-
-
 
     def tearDown(self) -> None:
         self.driver.quit()
@@ -45,7 +33,6 @@ class TestSampleApp(Setup):
         self.page.press_the_button_on_the_page()
         self.page.find_updated_information()
         self.assertTrue(self.page.find_updated_information())
-
 
 class TestAjaxData(Setup):
 
@@ -92,7 +79,6 @@ class TestClientSideDelay(Setup):
         self.page.client_side_page_element_appeared()
         self.assertTrue(self.page.client_side_page_element_appeared())
 
-
 #
 class TestBadClick(Setup):
 
@@ -130,15 +116,15 @@ class TestTextInput(Setup):
 #         self.page.find_the_button_on_the_page()
 #         # self.page.click_element()
 #         # self.assertTrue(self.page.click_element)
-# TODO script problem
+    #TODO script problem
 
 
 if __name__ == '__main__':
     from multiprocessing import Process
-
     procs = []
     procs.append(Process(target=unittest.main, kwargs={'verbosity': 2}))
     for proc in procs:
         proc.start()
     for proc in procs:
         proc.join()
+
