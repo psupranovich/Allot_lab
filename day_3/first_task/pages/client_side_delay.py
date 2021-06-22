@@ -1,5 +1,3 @@
-from time import sleep
-
 from .base_page import BasePage
 from day_3.first_task.locators import MainPageLocators, ClientSideDelayLocators
 

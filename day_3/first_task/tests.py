@@ -7,6 +7,7 @@ from selenium import webdriver
 # from first_task.pages.click import BadClick
 # from first_task.pages.text_input import TextInput
 # from first_task.pages.ajax_data import AjaxData
+from day_3.first_task.pages.click import BadClick
 from day_3.first_task.pages.client_side_delay import ClientSideDelay
 from day_3.first_task.pages.load_delay import LoadDelay
 
@@ -20,29 +21,38 @@ class Setup(unittest.TestCase):
         self.driver.quit()
 
 
-class TestLoadDealay(Setup):
+# class TestLoadDealay(Setup):
+#
+#     def test_user_can_load_delay_page(self):
+#         self.page = LoadDelay(self.driver)
+#         self.page.go_to_site()
+#         self.page.open_page_button()
+#         self.page.press_the_button_on_the_page()
+#         self.assertEqual(self.driver.title, 'Load Delays')
+#
+#
+# class TestClientSideDelay(Setup):
+#
+#     def test_user_can_see_page_element(self):
+#         self.page = ClientSideDelay(self.driver)
+#         self.page.go_to_site()
+#         self.page.open_page_button()
+#         self.assertEqual(self.driver.title, 'Client Side Delay')
+#         self.page.press_the_button_on_the_page()
+#         self.page.client_side_page_element_appeared()
+#         self.assertTrue(self.page.client_side_page_element_appeared())
+#
 
-    def test_user_can_load_delay_page(self):
-        self.page = LoadDelay(self.driver)
+class TestBadClick(Setup):
+
+    def test_uset_can_cLick_on_bad_button(self):
+        self.page = BadClick(self.driver)
         self.page.go_to_site()
         self.page.open_page_button()
+        self.assertEqual(self.driver.title, 'Click')
         self.page.press_the_button_on_the_page()
-        self.assertEqual(self.driver.title, 'Load Delays')
-
-
-class TestClientSideDelay(Setup):
-
-    def test_user_can_see_page_element(self):
-        self.page = ClientSideDelay(self.driver)
-        self.page.go_to_site()
-        self.page.open_page_button()
-        self.assertEqual(self.driver.title, 'Client Side Delay')
-        self.page.press_the_button_on_the_page()
-        self.page.client_side_page_element_appeared()
-        self.assertTrue(self.page.client_side_page_element_appeared())
-
-
-
+        self.page.new_button_color()
+        self.assertTrue(self.page.new_button_color())
 
 # def test_user_can_load_ajax_data_and_see_element(browser):
 #     resource = 'ajax'

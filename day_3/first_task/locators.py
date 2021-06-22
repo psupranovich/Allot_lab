@@ -27,7 +27,8 @@ class ClientSideDelayLocators():
 
 
 class ClickLocators():
-    BUTTON_CLICK = (By.CSS_SELECTOR, '#badButton')
+    BUTTON_CLICK = (By.CSS_SELECTOR, '[class="btn btn-primary"]')
+    BUTTON_CLICK_GREEN = (By.CSS_SELECTOR, '[class = "btn btn-success"]')
 
 class InputTextLocators():
     INPUTTEXT = (By.CSS_SELECTOR, '#newButtonName')
