@@ -17,24 +17,11 @@ class Setup(unittest.TestCase):
     def setUp(self) -> None:
 
         self.driver = webdriver.Chrome()
-
-        capabilities = {
-        #     "browserName": "chrome",
-        #     "browserVersion": "91.0",
-        #     "selenoid:options": {
-        #         "enableVNC": True,
-        #         "enableVideo": False
-        #     }
-        # }
-        #
-        # self.driver = webdriver.Remote(
-        #     command_executor="http://localhost:4444/wd/hub",
-        #     desired_capabilities=capabilities)
-
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
         self.driver.quit()
+
 
 class TestSampleApp(Setup):
 
