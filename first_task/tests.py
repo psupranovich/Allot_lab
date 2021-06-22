@@ -1,6 +1,5 @@
 import unittest
 from selenium import webdriver
-
 from first_task.pages.ajax_data import AjaxData
 from first_task.pages.click import BadClick
 from first_task.pages.client_side_delay import ClientSideDelay
@@ -10,13 +9,14 @@ from first_task.pages.sample_app import SampleApp
 from first_task.pages.scrollbars import Scrollbars
 
 from first_task.pages.text_input import TextInput
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
 
-        self.driver = webdriver.Chrome(executable_path = 'chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install())
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
