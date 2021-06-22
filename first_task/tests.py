@@ -15,12 +15,37 @@ from first_task.pages.text_input import TextInput
 class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.driver = webdriver.Chrome(executable_path=r"C:\chromedriver\chromedriver.exe")
+
+        capabilities = {
+            "browserName": "chrome",
+            "browserVersion": "91.0",
+            "selenoid:options": {
+                "enableVNC": True,
+                "enableVideo": False
+            }
+        }
+
+        self.driver = webdriver.Remote(
+            command_executor="http://localhost:4444/wd/hub",
+            desired_capabilities=capabilities)
+
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
         self.driver.quit()
 
+class TestSampleApp(Setup):
+
+    def test_users_enter_name_and_see_updated_status(self):
+        self.page = SampleApp(self.driver)
+        self.page.go_to_site()
+        self.page.open_page_button()
+        self.assertEqual(self.driver.title, 'Sample App')
+        self.page.input_name()
+        self.page.input_password()
+        self.page.press_the_button_on_the_page()
+        self.page.find_updated_information()
+        self.assertTrue(self.page.find_updated_information())
 
 class TestAjaxData(Setup):
 
@@ -92,18 +117,7 @@ class TestTextInput(Setup):
         self.page.find_updated_button()
         self.assertTrue(self.page.find_updated_button())
 
-class TestSampleApp(Setup):
 
-    def test_users_enter_name_and_see_updated_status(self):
-        self.page = SampleApp(self.driver)
-        self.page.go_to_site()
-        self.page.open_page_button()
-        self.assertEqual(self.driver.title, 'Sample App')
-        self.page.input_name()
-        self.page.input_password()
-        self.page.press_the_button_on_the_page()
-        self.page.find_updated_information()
-        self.assertTrue(self.page.find_updated_information())
 #
 # class TestScrollbars(Setup):
 #

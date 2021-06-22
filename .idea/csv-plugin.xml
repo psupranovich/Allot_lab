@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Dockerfile">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\day_3\BaseApp.py">
           <value>
             <Attribute>
@@ -151,6 +158,13 @@
           </value>
         </entry>
         <entry key="\first_task\pages\simple_app.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\first_task\tests.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
