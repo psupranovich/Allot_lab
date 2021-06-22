@@ -7,10 +7,12 @@ class MainPageLocators():
     CLIENT_SIDE_DELAY = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[2]/h3/a')
     CLICK = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[3]/h3/a')
     TEXT_INPUT = (By.XPATH, '//*[@id="overview"]/div/div[2]/div[4]/h3/a')
-    SCROLLBARS = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[1]/h3/a')
-    DYNAMIC_TABLE = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[2]/h3/a')
-    VERIFY_TEXT = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[3]/h3/a')
+    # SCROLLBARS = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[1]/h3/a')
+    # DYNAMIC_TABLE = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[2]/h3/a')
+    # VERIFY_TEXT = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[3]/h3/a')
     PROGRESS_BAR = (By.XPATH, '//*[@id="overview"]/div/div[3]/div[4]/h3/a')
+    SIMPLE_APP = (By.XPATH, '//*[@id="overview"]/div/div[4]/div[2]/h3/a')
+
 
 
 class LoadDelayLocators():
@@ -43,5 +45,12 @@ class ProgressBarLocators():
     STOP_BUTTON = (By.ID, 'stopButton')
     TRUE_VALUE = (By.CSS_SELECTOR, '[aria-valuenow="75"]')
     RESULT = (By.ID, 'result')
+
+
+class SampleAppLocators():
+    INPUT_NAME = (By.NAME, 'UserName')
+    INPUT_RASSWORD = (By.NAME, 'Password')
+    BUTTON = (By.ID, 'login')
+    LOGINSTATUS = (By.ID, 'loginstatus')
 
 

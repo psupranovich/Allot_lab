@@ -2,5 +2,5 @@ selenium
 pytest
 nose
 pytest-xdist==2.3.0
-unittest-parallel==1.4.1
+nose-parallel==0.4.0
 
