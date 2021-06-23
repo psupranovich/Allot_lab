@@ -4,4 +4,6 @@ nose
 pytest-xdist==2.3.0
 nose-parallel==0.4.0
 webdriver-manager==3.3.0
+locust==1.5.3
+
 
