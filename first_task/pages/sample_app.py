@@ -1,5 +1,5 @@
+from first_task.locators import MainPageLocators, SampleAppLocators
 from .base_page import BasePage
-from first_task.locators import MainPageLocators, InputTextLocators, SampleAppLocators
 
 
 class SampleApp(BasePage):

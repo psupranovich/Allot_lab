@@ -1,6 +1,6 @@
 # coding: utf-8
-from .base_page import BasePage
 from first_task.locators import MainPageLocators, ProgressBarLocators
+from .base_page import BasePage
 
 
 class ProgressBar(BasePage):

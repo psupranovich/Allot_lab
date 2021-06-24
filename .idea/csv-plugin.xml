@@ -150,6 +150,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\first_task\pages\sample_app.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\first_task\pages\scrollbars.py">
           <value>
             <Attribute>

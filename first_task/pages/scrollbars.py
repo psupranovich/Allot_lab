@@ -1,5 +1,5 @@
-from .base_page import BasePage
 from first_task.locators import ScrollbarsLocators, MainPageLocators
+from .base_page import BasePage
 
 
 class Scrollbars(BasePage):

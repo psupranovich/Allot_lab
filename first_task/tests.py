@@ -1,12 +1,14 @@
 import unittest
+
+import allure
 from selenium import webdriver
+
 from first_task.pages.ajax_data import AjaxData
 from first_task.pages.click import BadClick
 from first_task.pages.client_side_delay import ClientSideDelay
 from first_task.pages.load_delay import LoadDelay
 from first_task.pages.progress_bar import ProgressBar
 from first_task.pages.sample_app import SampleApp
-from first_task.pages.scrollbars import Scrollbars
 from first_task.pages.text_input import TextInput
 
 
@@ -22,16 +24,23 @@ class Setup(unittest.TestCase):
 
 
 class TestSampleApp(Setup):
-
+    @allure.feature('UI_PlayGround')
+    @allure.story('Sample app test')
     def test_users_enter_name_and_see_updated_status(self):
         self.page = SampleApp(self.driver)
-        self.page.go_to_site()
-        self.page.open_page_button()
+        with allure.step('Open site'):
+            self.page.go_to_site()
+        with allure.step('Open page Sample App'):
+            self.page.open_page_button()
         self.assertEqual(self.driver.title, 'Sample App')
-        self.page.input_name()
-        self.page.input_password()
-        self.page.press_the_button_on_the_page()
-        self.page.find_updated_information()
+        with allure.step('Input password'):
+            self.page.input_name()
+        with allure.step('Input password'):
+            self.page.input_password()
+        with allure.step('Press the bitton'):
+            self.page.press_the_button_on_the_page()
+        with allure.step('Find changed button'):
+            self.page.find_updated_information()
         self.assertTrue(self.page.find_updated_information())
 
 class TestAjaxData(Setup):

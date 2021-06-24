@@ -1,5 +1,5 @@
-from .base_page import BasePage
 from first_task.locators import MainPageLocators, InputTextLocators
+from .base_page import BasePage
 
 
 class TextInput(BasePage):
