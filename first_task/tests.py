@@ -13,8 +13,7 @@ from first_task.pages.text_input import TextInput
 class Setup(unittest.TestCase):
 
     def setUp(self) -> None:
-
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(executable_path='chromedriver')
         self.driver.implicitly_wait(10)
 
     def tearDown(self) -> None:
@@ -48,7 +47,7 @@ class TestAjaxData(Setup):
 
 class TestProgressBar(Setup):
 
-    def test_user_see_75_on_the_proggress_bar(self):
+    def test_user_see_75_on_the_progress_bar(self):
         self.page = ProgressBar(self.driver)
         self.page.go_to_site()
         self.page.open_page_button()
@@ -105,18 +104,7 @@ class TestTextInput(Setup):
         self.assertTrue(self.page.find_updated_button())
 
 
-#
-# class TestScrollbars(Setup):
-#
-#     def test_the_user_can_scroll_and_press_the_button(self):
-#         self.page = Scrollbars(self.driver)
-#         self.page.go_to_site()
-#         self.page.open_page_button()
-#         self.assertEqual(self.driver.title, 'Scrollbars')
-#         self.page.find_the_button_on_the_page()
-#         # self.page.click_element()
-#         # self.assertTrue(self.page.click_element)
-    #TODO script problem
+
 
 
 if __name__ == '__main__':
