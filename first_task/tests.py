@@ -33,7 +33,7 @@ class TestSampleApp(Setup):
         with allure.step('Open page Sample App'):
             self.page.open_page_button()
         self.assertEqual(self.driver.title, 'Sample App')
-        with allure.step('Input password'):
+        with allure.step('Input name'):
             self.page.input_name()
         with allure.step('Input password'):
             self.page.input_password()
@@ -95,11 +95,13 @@ class TestClientSideDelay(Setup):
         self.page = ClientSideDelay(self.driver)
         with allure.step('Open site'):
             self.page.go_to_site()
-        self.page.open_page_button()
+        with allure.step('Open Test Client SideDelay page'):
+            self.page.open_page_button()
         self.assertEqual(self.driver.title, 'Client Side Delay')
-        self.page.press_the_button_on_the_page()
-        self.page.client_side_page_element_appeared()
-        self.assertTrue(self.page.client_side_page_element_appeared())
+        with allure.step('Press the button on the page'):
+            self.page.press_the_button_on_the_page()
+            self.page.client_side_page_element_appeared()
+            self.assertTrue(self.page.client_side_page_element_appeared())
 
 #
 class TestBadClick(Setup):
